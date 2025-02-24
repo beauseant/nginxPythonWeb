@@ -1,0 +1,19 @@
+services:
+
+  proxann-proxy:
+    container_name: proxann-proxy
+    image: nginx:mainline-alpine
+  web:
+    build: .
+    container_name: pythonweb
+#    depends_on:
+#      - ewb-backend-apis
+#      - ewb-frontend
+#
+#  ewb-backend-apis:
+#    container_name: ewb-backend-apis
+#    image: ${DOCKER_REGISTRY}ai4university-evaluation-workbench-api:${WORKBENCH_TAG}
+# 
+#  ewb-frontend:
+#    container_name: ewb-frontend
+#    image: ${DOCKER_REGISTRY}ai4university-evaluation-workbench-webapp:${WORKBENCH_TAG}
